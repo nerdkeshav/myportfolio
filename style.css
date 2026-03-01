@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #a5c7f7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.main-bg { width: 100%; height: 100%; object-fit: cover; }
+.cloud-top { position: absolute; top: 0; width: 100%; }
+.cloud-bottom { position: absolute; bottom: 0; width: 100%; }
+
+.nav-pill {
+    position: absolute;
+    top: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: 2px solid white;
+    z-index: 10;
+}
+
+.nav-pill ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-pill a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.nav-pill a.active {
+    color: #7fa9e8;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: -20px;
+}
+
+.pfp {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 8px solid white;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-text {
+    text-align: left;
+}
+
+h1 {
+    color: #5385ca;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -3px;
+}
+
+h1 span {
+    color: white;
+}
+
+.subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.cloud-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #72a5ec;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #72a5ec;
+    letter-spacing: -0.5px;
+}
+
+.socials-pill {
+    background: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.socials-pill a {
+    color: #72a5ec;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #72a5ec;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+.tech-tag {
+    background: white;
+    color: #72a5ec;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+.project-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(199, 0, 182);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #5385ca;
+    margin-bottom: 5px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+.about-top-row {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+.about-pfp {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.about-card {
+    background: white;
+    flex: 1;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-card h2 {
+    color: #5385ca;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-card h2 span {
+    text-decoration: underline;
+}
+
+.about-card p {
+    color: #72a5ec;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.about-card .small-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.tech-stack-card {
+    background: #72a5ec;
+    width: 350px;
+    align-self: flex-start;
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+}
+
+.tech-stack-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.tech-stack-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.tech-stack-card li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
